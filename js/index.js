@@ -24,7 +24,7 @@ var foodComment;
 var serviceScore;
 var serviceComment;
 var question = 1;
-robotSay("Welcome to Orangeapp restuarant");
+robotSay("Welcome to Orangeapp Restaurant.");
 robotSay("What is your name？");
 
 function res() {
