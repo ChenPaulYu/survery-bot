@@ -24,8 +24,8 @@ var foodComment;
 var serviceScore;
 var serviceComment;
 var question = 1;
-robotSay("感謝光臨橘子蘋果餐廳");
-robotSay("請問你的名字是？");
+robotSay("Welcome to Orangeapp restuarant");
+robotSay("What is your name？");
 
 function res() {
   var words = $("#input").val();
@@ -36,39 +36,39 @@ function res() {
    */
   if(question == 1) {
     name = words;
-    robotSay("請問你是第一次用餐嗎?yes or no?")
+    robotSay("Is this the first time to come here?yes or no?")
   }else if(question == 2) {
     isVisited = words;
       if(words == "yes" || words == "y" || words == "是" ||
          words == "no"  || words == "n" || words == "否"){
-        robotSay("很高興你的光臨");
-        robotSay("請問你滿意今日的餐點嗎?1-5分,1分為不滿意,5分為滿意");
+        robotSay("Welcome");
+        robotSay("How do you feel our meal? (1-5)");
       }else{
-        robotSay("我聽不太懂,請你再輸入一次");
+        robotSay("I cannot understand, please type again?");
         return;
       }
   }else if(question == 3) {
     foodScore = words;
     if(words > 2){
-      robotSay("很高興你喜歡我們的餐點");
-      robotSay("請問你最喜歡哪個餐點?");
+      robotSay("We so glad you enjoy the meal.");
+      robotSay("Which meal do you like the most?");
     }else{
-      robotSay("請問你覺得哪裡需要改進?");
+      robotSay("Please tell us what should we improve.");
     }
   }else if(question == 4) {
     foodComment = words;
-    robotSay("請問你滿意今日的服務嗎?1-5分,1分為不滿意,5分為滿意");
+    robotSay("How do you feel our service? (1-5)");
   }else if(question == 5) {
     serviceScore = words;
     if(words > 2){
-      robotSay("很高興你喜歡我們的服務");
-      robotSay("請問你最喜歡哪個服務?");
+      robotSay("It is our pleasure to serve you.");
+      robotSay("Which service do you think is the best?");
     }else{
-      robotSay("請問你覺得哪裡需要改進?");
+      robotSay("Please tell us what should we improve.");
     }
   }else if(question == 6) {
     serviceComment = words;
-    robotSay("感謝你的回覆,期待你的再次光臨");
+    robotSay("Thanks for your feedback, hope to see you again.");
     
     surveyRef.push({
       name: name,
